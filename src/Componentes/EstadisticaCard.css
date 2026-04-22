@@ -1,0 +1,80 @@
+/* src/pages/Estadisticas/Componentes/EstadisticaCard.css */
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.dark .stat-card {
+  background: #1e293b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.stat-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon-large {
+  font-size: 2rem !important;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-title {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  margin: 8px 0 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.dark .stat-value {
+  color: #f1f5f9;
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-icon-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .stat-icon-large {
+    font-size: 1.5rem !important;
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+  }
+}

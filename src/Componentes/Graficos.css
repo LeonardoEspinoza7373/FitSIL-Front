@@ -1,0 +1,105 @@
+/* Componentes/Graficos.css */
+
+.grafico-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.page.dark .grafico-card {
+  background: #1e293b;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.grafico-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.page.dark .grafico-card:hover {
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
+}
+
+.grafico-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+  transition: color 0.3s ease;
+}
+
+.page.dark .grafico-card h3 {
+  color: #ffffff;
+}
+
+.valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f97316;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.page.dark .valor {
+  color: #3b82f6;
+}
+
+/* Gráfico de Barras */
+.barras {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 150px;
+  gap: 0.5rem;
+}
+
+.barra-contenedor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.barra {
+  width: 100%;
+  background: linear-gradient(to top, #f97316, #ea580c);
+  border-radius: 0.5rem 0.5rem 0 0;
+  transition: all 0.3s ease;
+}
+
+.page.dark .barra {
+  background: linear-gradient(to top, #3b82f6, #2563eb);
+}
+
+.barra-contenedor:hover .barra {
+  opacity: 0.8;
+  transform: scaleY(1.05);
+}
+
+.barra-contenedor span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  transition: color 0.3s ease;
+}
+
+.page.dark .barra-contenedor span {
+  color: #94a3b8;
+}
+
+/* Gráfico de Línea */
+.grafico-linea {
+  width: 100%;
+  height: 120px;
+}
+
+.grafico-linea polyline {
+  stroke: #f97316;
+  transition: stroke 0.3s ease;
+}
+
+.page.dark .grafico-linea polyline {
+  stroke: #3b82f6;
+}

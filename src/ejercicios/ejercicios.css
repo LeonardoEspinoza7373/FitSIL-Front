@@ -1,0 +1,528 @@
+/* ========================================
+   CONTENEDOR PRINCIPAL
+======================================== */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ========================================
+   HEADER CON BOTÓN NUEVO
+======================================== */
+.header-ejercicios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.btn-nuevo-ejercicio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-nuevo-ejercicio:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* ========================================
+   BÚSQUEDA
+======================================== */
+.search {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  transition: border-color 0.3s;
+}
+
+.search:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.125rem;
+  color: #666;
+}
+
+/* ========================================
+   GRID DE TARJETAS
+======================================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ========================================
+   TARJETA DE EJERCICIO
+======================================== */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  height: 180px;
+  width: 100%;
+  background-size: cover;        /* 🔥 CLAVE */
+  background-position: center;   /* centra */
+  background-repeat: no-repeat;  /* no repite */
+  border-radius: 14px 14px 0 0;
+}
+
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-body h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: #e8f4fd;
+  color: #3498db;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ========================================
+   BOTONES ADMIN EN TARJETA
+======================================== */
+.card-admin-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-editar-card,
+.btn-eliminar-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-editar-card {
+  background: #e3f2fd;
+  color: #2196f3;
+}
+
+.btn-editar-card:hover {
+  background: #2196f3;
+  color: white;
+}
+
+.btn-eliminar-card {
+  background: #ffebee;
+  color: #f44336;
+}
+
+.btn-eliminar-card:hover {
+  background: #f44336;
+  color: white;
+}
+
+.btn-editar-card .material-icons,
+.btn-eliminar-card .material-icons {
+  font-size: 18px;
+}
+
+/* ========================================
+   DETALLE DEL EJERCICIO
+======================================== */
+.detalle {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back {
+  background: #f0f0f0;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s;
+}
+
+.back:hover {
+  background: #e0e0e0;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.detalle h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.sub {
+  color: #3498db;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.detalle h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  color: #2c3e50;
+}
+
+.detalle p {
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ========================================
+   ACCIONES EN DETALLE
+======================================== */
+.detalle-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-rutina,
+.btn-editar,
+.btn-eliminar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-rutina {
+  background: #2ecc71;
+  color: white;
+}
+
+.btn-rutina:hover {
+  background: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.4);
+}
+
+.btn-editar {
+  background: #3498db;
+  color: white;
+}
+
+.btn-editar:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
+
+.btn-eliminar {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* ========================================
+   MODAL
+======================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-form {
+  background: white;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: #f0f0f0;
+}
+
+/* ========================================
+   FORMULARIO
+======================================== */
+.ejercicio-form {
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-cancelar,
+.btn-guardar {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancelar {
+  background: #e0e0e0;
+  color: #555;
+}
+
+.btn-cancelar:hover {
+  background: #d0d0d0;
+}
+
+.btn-guardar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-guardar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-guardar:disabled,
+.btn-cancelar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   MENSAJES DE ESTADO
+======================================== */
+.loading-message {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.error-message {
+  text-align: center;
+  padding: 3rem;
+}
+
+.error-message button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ========================================
+   MODO OSCURO
+======================================== */
+.app-container.dark {
+  background: #1a1a1a;
+}
+
+.dark .titulo {
+  color: #e0e0e0;
+}
+
+.dark .search {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark .card {
+  background: #2a2a2a;
+}
+
+.dark .card-body h3 {
+  color: #e0e0e0;
+}
+
+.dark .detalle {
+  background: #2a2a2a;
+}
+
+.dark .detalle h2,
+.dark .detalle h3 {
+  color: #e0e0e0;
+}
+
+.dark .detalle p {
+  color: #b0b0b0;
+}
+
+.dark .modal-form {
+  background: #2a2a2a;
+}
+
+.dark .modal-header {
+  border-bottom-color: #444;
+}
+
+.dark .modal-header h2 {
+  color: #e0e0e0;
+}
+
+.dark .form-group label {
+  color: #e0e0e0;
+}
+
+.dark .form-group input,
+.dark .form-group select,
+.dark .form-group textarea {
+  background: #1a1a1a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark .back {
+  background: #3a3a3a;
+  color: #e0e0e0;
+}
+
+.dark .back:hover {
+  background: #4a4a4a;
+}

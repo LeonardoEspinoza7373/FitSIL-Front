@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+  /* Colores Light Mode */
+  --bg-primary: #f6f6f8;
+  --bg-secondary: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --accent: #f97316;
+  --accent-dark: #ea580c;
+  --hover-bg: #f1f5f9;
+  
+  /* Colores Dark Mode */
+  --dark-bg-primary: #0f172a;
+  --dark-bg-secondary: #1e293b;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #94a3b8;
+  --dark-border-color: #334155;
+  --dark-accent: #3b82f6;
+  --dark-accent-dark: #2563eb;
+  --dark-hover-bg: #1e293b;
+  
+  /* Otros */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.15);
+  --shadow-dark: 0 2px 8px rgba(0, 0, 0, 0.3);
+  
+  --transition: all 0.3s ease;
+  --radius: 0.75rem;
+  --text-scale: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: var(--text-scale, 100%);
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark body {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+}
+
+/* Estilos generales para el modo oscuro */
+html.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --accent: #3b82f6;
+  --hover-bg: #1e293b;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+button {
+  font-family: 'Lexend', sans-serif;
+}
+
+input, textarea, select {
+  font-family: 'Lexend', sans-serif;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+  border-color: var(--dark-border-color);
+}

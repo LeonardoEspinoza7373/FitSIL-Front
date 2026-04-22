@@ -1,0 +1,12 @@
+.fit-navbar {
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
+
+.fit-card {
+  border: 1px solid #ccc;
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}

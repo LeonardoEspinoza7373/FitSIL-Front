@@ -1,0 +1,403 @@
+/* src/components/Modals/ModalCambiarContrasena.css */
+
+.modal-overlay-password {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content-password {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content-password.dark {
+  background: #2d2d2d;
+}
+
+.modal-header-password {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.modal-content-password.dark .modal-header-password {
+  border-bottom-color: #444;
+}
+
+.header-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header-icon .material-icons {
+  color: white;
+  font-size: 28px;
+}
+
+.modal-header-password h3 {
+  flex: 1;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.modal-content-password.dark .modal-header-password h3 {
+  color: #e0e0e0;
+}
+
+.close-btn-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.close-btn-password:hover {
+  background: #f5f5f5;
+}
+
+.modal-content-password.dark .close-btn-password:hover {
+  background: #3d3d3d;
+}
+
+.close-btn-password .material-icons {
+  font-size: 24px;
+  color: #666;
+}
+
+.modal-content-password.dark .close-btn-password .material-icons {
+  color: #b0b0b0;
+}
+
+.modal-body-password {
+  padding: 24px;
+}
+
+.alert-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  color: #c33;
+  margin-bottom: 20px;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.alert-error .material-icons {
+  font-size: 20px;
+}
+
+.form-group-password {
+  margin-bottom: 20px;
+}
+
+.form-group-password label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.modal-content-password.dark .form-group-password label {
+  color: #e0e0e0;
+}
+
+.form-group-password label .material-icons {
+  font-size: 18px;
+  color: #1976d2;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding: 14px 45px 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.password-input-wrapper input:focus {
+  outline: none;
+  border-color: #1976d2;
+  background: #f8f9ff;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.password-input-wrapper input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.modal-content-password.dark .password-input-wrapper input {
+  background: #3d3d3d;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+.modal-content-password.dark .password-input-wrapper input:focus {
+  background: #4d4d4d;
+  border-color: #1976d2;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.toggle-password:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.toggle-password .material-icons {
+  font-size: 20px;
+  color: #666;
+}
+
+.modal-content-password.dark .toggle-password:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.modal-content-password.dark .toggle-password .material-icons {
+  color: #b0b0b0;
+}
+
+.password-requirements {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #1976d2;
+}
+
+.modal-content-password.dark .password-requirements {
+  background: #3d3d3d;
+  border-left-color: #1976d2;
+}
+
+.requirements-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+.modal-content-password.dark .requirements-title {
+  color: #e0e0e0;
+}
+
+.requirements-title .material-icons {
+  font-size: 18px;
+  color: #1976d2;
+}
+
+.password-requirements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.password-requirements li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  color: #666;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.password-requirements li::before {
+  content: '○';
+  color: #ccc;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.password-requirements li.valid {
+  color: #10b981;
+  font-weight: 500;
+}
+
+.password-requirements li.valid::before {
+  content: '✓';
+  color: #10b981;
+}
+
+.modal-content-password.dark .password-requirements li {
+  color: #b0b0b0;
+}
+
+.modal-content-password.dark .password-requirements li.valid {
+  color: #10b981;
+}
+
+.modal-actions-password {
+  display: flex;
+  gap: 12px;
+  padding: 20px 24px 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.modal-content-password.dark .modal-actions-password {
+  border-top-color: #444;
+}
+
+.btn-cancel-password,
+.btn-submit-password {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-cancel-password {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.btn-cancel-password:hover:not(:disabled) {
+  background: #e0e0e0;
+  transform: translateY(-1px);
+}
+
+.btn-submit-password {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+}
+
+.btn-submit-password:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(25, 118, 210, 0.3);
+}
+
+.btn-cancel-password:disabled,
+.btn-submit-password:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-submit-password .material-icons,
+.btn-cancel-password .material-icons {
+  font-size: 20px;
+}
+
+.modal-content-password.dark .btn-cancel-password {
+  background: #3d3d3d;
+  color: #e0e0e0;
+}
+
+.modal-content-password.dark .btn-cancel-password:hover:not(:disabled) {
+  background: #4d4d4d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-overlay-password {
+    padding: 10px;
+  }
+
+  .modal-content-password {
+    max-width: 100%;
+  }
+
+  .modal-header-password {
+    padding: 20px;
+  }
+
+  .modal-body-password {
+    padding: 20px;
+  }
+
+  .modal-actions-password {
+    flex-direction: column;
+    padding: 16px 20px 20px;
+  }
+}

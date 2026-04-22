@@ -1,0 +1,207 @@
+/* admin/admin.css */
+
+/* MODO CLARO */
+.admin-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #f9fafb;
+  transition: background 0.3s ease;
+}
+
+/* MODO OSCURO */
+.admin-wrapper.dark {
+  background: transparent;
+}
+
+/* CARD */
+.admin-card {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.admin-wrapper.dark .admin-card {
+  background: #1e293b;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* TITULOS */
+.admin-card h2 {
+  text-align: center;
+  color: #f97316;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.admin-wrapper.dark .admin-card h2 {
+  color: #3b82f6;
+}
+
+.admin-card p {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.admin-wrapper.dark .admin-card p {
+  color: #94a3b8;
+}
+
+/* FORMULARIO */
+.admin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* INPUTS, SELECT, TEXTAREA */
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  border: 2px solid #e5e7eb;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.admin-wrapper.dark .admin-form input,
+.admin-wrapper.dark .admin-form select,
+.admin-wrapper.dark .admin-form textarea {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #ffffff;
+}
+
+/* ALTURAS */
+.admin-form input,
+.admin-form select {
+  height: 3.5rem;
+}
+
+.admin-form textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+/* PLACEHOLDER */
+.admin-form input::placeholder,
+.admin-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.admin-wrapper.dark .admin-form input::placeholder,
+.admin-wrapper.dark .admin-form textarea::placeholder {
+  color: #64748b;
+}
+
+/* FOCUS */
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.admin-wrapper.dark .admin-form input:focus,
+.admin-wrapper.dark .admin-form select:focus,
+.admin-wrapper.dark .admin-form textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* FILE INPUT */
+.admin-form input[type="file"] {
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.admin-form input[type="file"]::file-selector-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #f1f5f9;
+  color: #0f172a;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+.admin-wrapper.dark .admin-form input[type="file"]::file-selector-button {
+  background: #334155;
+  color: #ffffff;
+}
+
+.admin-form input[type="file"]::file-selector-button:hover {
+  background: #e2e8f0;
+}
+
+.admin-wrapper.dark .admin-form input[type="file"]::file-selector-button:hover {
+  background: #475569;
+}
+
+/* BOTON */
+.admin-form button {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.admin-wrapper.dark .admin-form button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.admin-form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+}
+
+.admin-wrapper.dark .admin-form button:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+.admin-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .admin-wrapper {
+    padding: 1rem;
+  }
+
+  .admin-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .admin-card h2 {
+    font-size: 1.5rem;
+  }
+}

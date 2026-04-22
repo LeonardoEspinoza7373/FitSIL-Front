@@ -1,0 +1,21 @@
+/* src/components/Layout/MainLayout.css */
+.main-layout {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.main-layout.dark {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+  background-image: linear-gradient(to bottom, var(--dark-bg-primary), #0c0f1f);
+}
+
+.main-content {
+  min-height: calc(100vh - 70px);
+  padding: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}

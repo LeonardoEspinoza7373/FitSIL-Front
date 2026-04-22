@@ -1,0 +1,135 @@
+/* src/pages/Estadisticas/Componentes/ActividadReciente.css */
+
+.actividad {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.actividad-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.actividad-empty .material-icons {
+  font-size: 4rem;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+.actividad-empty p {
+  margin: 8px 0;
+  color: #64748b;
+}
+
+.empty-subtitle {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.actividad-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border-left: 4px solid #3b82f6;
+  transition: all 0.3s;
+}
+
+.dark .actividad-item {
+  background: #0f172a;
+  border-left-color: #3b82f6;
+}
+
+.actividad-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+}
+
+.actividad-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.actividad-icon .material-icons {
+  color: #3b82f6;
+  font-size: 1.5rem;
+}
+
+.actividad-info {
+  flex: 1;
+}
+
+.actividad-titulo {
+  display: block;
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.dark .actividad-titulo {
+  color: #f1f5f9;
+}
+
+.actividad-fecha {
+  margin: 0 0 12px 0;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.actividad-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stat-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  background: white;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.dark .stat-badge {
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+.stat-badge .material-icons {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .actividad-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .actividad-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .actividad-stats {
+    gap: 8px;
+  }
+}

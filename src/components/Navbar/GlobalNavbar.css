@@ -1,0 +1,525 @@
+/* src/components/Navbar/GlobalNavbar.css */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.global-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.global-navbar.dark {
+  background: #0f172a;
+  border-bottom-color: #1e293b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: #f97316;
+}
+
+.global-navbar.dark .logo-icon {
+  color: #3b82f6;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  transition: color 0.3s ease;
+}
+
+.global-navbar.dark .brand-name {
+  color: #ffffff;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.75rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.global-navbar.dark .nav-link {
+  color: #94a3b8;
+}
+
+.nav-link:hover {
+  background: #f1f5f9;
+  color: #f97316;
+}
+
+.global-navbar.dark .nav-link:hover {
+  background: #1e293b;
+  color: #3b82f6;
+}
+
+.nav-link.active {
+  background: #fef3c7;
+  color: #f97316;
+  font-weight: 600;
+}
+
+.global-navbar.dark .nav-link.active {
+  background: #1e3a8a;
+  color: #3b82f6;
+}
+
+.nav-link .material-icons {
+  font-size: 1.25rem;
+}
+
+/* Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.text-zoom {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--hover-bg);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.global-navbar.dark .text-zoom {
+  background: var(--dark-hover-bg);
+  border-color: var(--dark-border-color);
+}
+
+.text-zoom-btn {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  color: var(--text-primary);
+}
+
+.global-navbar.dark .text-zoom-btn {
+  color: var(--dark-text-primary);
+}
+
+.text-zoom-btn:hover {
+  color: var(--accent);
+}
+
+.text-zoom-value {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  min-width: 3ch;
+  text-align: center;
+}
+
+.global-navbar.dark .text-zoom-value {
+  color: var(--dark-text-secondary);
+}
+
+.theme-toggle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: #f1f5f9;
+}
+
+.global-navbar.dark .theme-toggle {
+  background: #1e293b;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* User Menu */
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #e2e8f0;
+}
+
+.global-navbar.dark .user-avatar {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-color: #1e293b;
+}
+
+.user-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.global-navbar.dark .user-avatar:hover {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.avatar-initials {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  min-width: 250px;
+  z-index: 1001;
+  animation: slideDown 0.2s ease;
+}
+
+.global-navbar.dark .dropdown-menu {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-info {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.user-name {
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+}
+
+.global-navbar.dark .user-name {
+  color: #ffffff;
+}
+
+.user-email {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0 0 0.5rem 0;
+}
+
+.global-navbar.dark .user-email {
+  color: #94a3b8;
+}
+
+.user-role {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.user-role.admin {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.global-navbar.dark .user-role.admin {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+.user-role.user {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.global-navbar.dark .user-role.user {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+.menu-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 0.5rem 0;
+}
+
+.global-navbar.dark .menu-divider {
+  background: #334155;
+}
+
+.menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  color: #0f172a;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.global-navbar.dark .menu-item {
+  color: #ffffff;
+}
+
+.menu-item:hover {
+  background: #f1f5f9;
+}
+
+.global-navbar.dark .menu-item:hover {
+  background: rgba(71, 85, 105, 0.3);
+}
+
+.menu-item.logout {
+  color: #dc2626;
+}
+
+.global-navbar.dark .menu-item.logout {
+  color: #fca5a5;
+}
+
+.menu-item.logout:hover {
+  background: #fee2e2;
+}
+
+.global-navbar.dark .menu-item.logout:hover {
+  background: rgba(220, 38, 38, 0.2);
+}
+
+.menu-item .material-icons {
+  font-size: 1.25rem;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .navbar-links {
+    gap: 0.25rem;
+  }
+
+  .nav-link span:not(.material-icons) {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar-container {
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+
+  .brand-name {
+    display: none;
+  }
+
+  .navbar-links {
+    flex: 0;
+  }
+
+  .theme-toggle {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.1rem;
+  }
+
+  .user-avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+/* Agregar estos estilos al final de tu GlobalNavbar.css existente */
+
+/* Botón de menú separado */
+.menu-toggle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+.menu-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.menu-toggle-btn .material-icons {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.dark .menu-toggle-btn {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .menu-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Avatar ahora es clickeable */
+.user-avatar {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+.user-avatar:active {
+  transform: scale(0.95);
+}
+
+/* Ajustar el contenedor del menú de usuario */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+/* El dropdown ahora se posiciona relativo al contenedor user-menu */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 1rem);
+  right: 0;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  padding: 1rem;
+  z-index: 1000;
+  animation: dropdownSlide 0.3s ease;
+}
+
+.dark .dropdown-menu {
+  background: #1e293b;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive: En móviles, mostrar solo el avatar y el menú */
+@media (max-width: 768px) {
+  .menu-toggle-btn {
+    display: flex;
+  }
+  
+  .dropdown-menu {
+    right: -1rem;
+    min-width: 260px;
+  }
+}
